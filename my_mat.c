@@ -51,10 +51,10 @@ void matrixB(){
         }
     }
         if(new_mat[l][m]!= 0){
-            printf("True");
+            printf("True\n");
         }
         else{
-            printf("False");
+            printf("False\n");
         }    
 }
 
@@ -93,7 +93,7 @@ void matrixC(){
         }
     }
         if(new_mat[l][m]!= 0){
-                printf("%d", new_mat[l][m]);
+                printf("%d",new_mat[l][m]);
         }
         else{
             printf("-1");
