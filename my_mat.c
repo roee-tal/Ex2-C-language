@@ -17,6 +17,12 @@ void matrixA(){
 }
 
 void matrixB(){
+    int new_mat[n][n];
+    for(int k=0;k<10;k++) {
+        for(int i=0;i<10;i++){
+            new_mat[k][i] = mat[k][i];
+        }
+    }
     int l,m;
     scanf("%d",&l);
     scanf("%d",&m);
@@ -26,25 +32,25 @@ void matrixB(){
                 if(i == j) {
                     continue;
                 }
-                if(mat[i][j] == 0 && mat[i][k]==0 && mat[k][j] == 0) {
-                    mat[i][j] = 0;
+                if(new_mat[i][j] == 0 && new_mat[i][k]==0 && new_mat[k][j] == 0) {
+                    new_mat[i][j] = 0;
                 }
-                else if((mat[i][j]!=0 && mat[i][k] == 0 && mat[k][j]!=0) || mat[i][j]!=0 && mat[i][k] != 0 && mat[k][j]==0) {
-                    mat[i][j] = mat[i][j];
+                else if((new_mat[i][j]!=0 && new_mat[i][k] == 0 && new_mat[k][j]!=0) || new_mat[i][j]!=0 && new_mat[i][k] != 0 && new_mat[k][j]==0) {
+                    new_mat[i][j] = new_mat[i][j];
                 }
-				else if((mat[i][j]!=0 && mat[i][k] == 0 && mat[k][j]==0)){
-                    mat[i][j] = mat[i][j];
+				else if((new_mat[i][j]!=0 && new_mat[i][k] == 0 && new_mat[k][j]==0)){
+                    new_mat[i][j] = new_mat[i][j];
                 }
-                else if((mat[i][j]==0 && mat[i][k] != 0 && mat[k][j]!=0)){
-                    mat[i][j] = mat[i][k]+mat[k][j];
+                else if((new_mat[i][j]==0 && new_mat[i][k] != 0 && new_mat[k][j]!=0)){
+                    new_mat[i][j] = new_mat[i][k]+new_mat[k][j];
                 }
                 else{
-                    mat[i][j] = MIN(mat[i][j], mat[i][k]+mat[k][j]);
+                    new_mat[i][j] = MIN(new_mat[i][j], new_mat[i][k]+new_mat[k][j]);
                 }
             }
         }
     }
-        if(mat[l][m]!= 0){
+        if(new_mat[l][m]!= 0){
             printf("True");
         }
         else{
@@ -53,6 +59,12 @@ void matrixB(){
 }
 
 void matrixC(){
+    int new_mat[n][n];
+    for(int k=0;k<10;k++) {
+        for(int i=0;i<10;i++){
+            new_mat[k][i] = mat[k][i];
+        }
+    }
     int l,m;
     scanf("%d",&l);
     scanf("%d",&m);
@@ -62,32 +74,30 @@ void matrixC(){
                 if(i == j) {
                     continue;
                 }
-                if(mat[i][j] == 0 && mat[i][k]==0 && mat[k][j] == 0) {
-                    mat[i][j] = 0;
+                if(new_mat[i][j] == 0 && new_mat[i][k]==0 && new_mat[k][j] == 0) {
+                    new_mat[i][j] = 0;
                 }
-                else if((mat[i][j]!=0 && mat[i][k] == 0 && mat[k][j]!=0) || mat[i][j]!=0 && mat[i][k] != 0 && mat[k][j]==0) {
-                    mat[i][j] = mat[i][j];
+                else if((new_mat[i][j]!=0 && new_mat[i][k] == 0 && new_mat[k][j]!=0) || new_mat[i][j]!=0 && new_mat[i][k] != 0 && new_mat[k][j]==0) {
+                    new_mat[i][j] = new_mat[i][j];
                 }
-				else if((mat[i][j]!=0 && mat[i][k] == 0 && mat[k][j]==0)){
-                    mat[i][j] = mat[i][j];
+				else if((new_mat[i][j]!=0 && new_mat[i][k] == 0 && new_mat[k][j]==0)){
+                    new_mat[i][j] = new_mat[i][j];
                 }
-                else if((mat[i][j]==0 && mat[i][k] != 0 && mat[k][j]!=0)){
-                    mat[i][j] = mat[i][k]+mat[k][j];
+                else if((new_mat[i][j]==0 && new_mat[i][k] != 0 && new_mat[k][j]!=0)){
+                    new_mat[i][j] = new_mat[i][k]+new_mat[k][j];
                 }
                 else{
-                    mat[i][j] = MIN(mat[i][j], mat[i][k]+mat[k][j]);
+                    new_mat[i][j] = MIN(new_mat[i][j], new_mat[i][k]+new_mat[k][j]);
                 }
             }
         }
     }
-        if(mat[l][m]!= 0){
-                printf("%d", mat[l][m]);
+        if(new_mat[l][m]!= 0){
+                printf("%d", new_mat[l][m]);
         }
         else{
             printf("-1");
-        }    
-
-    
+        }       
 }
 
 
