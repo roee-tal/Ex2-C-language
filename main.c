@@ -13,7 +13,8 @@ while (a!='D')
         matrixB();
     }
     if(a=='C'){
-        matrixB();
+        matrixC();
+        printf("\n");
     }
 
     scanf("%c",  &a);
