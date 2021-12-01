@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include "my_mat.h"
-int main()
+int main(){
+
+char c;
+scanf("%c",  &c);
+while (c!='D')
 {
-char a;
-scanf("%c",  &a);
-while (a!='D')
-{
-    if(a=='A'){
+    if(c=='A'){
       matrixA();
     }
-    if(a=='B'){
+    if(c=='B'){
         matrixB();
     }
-    if(a=='C'){
+    if(c=='C'){
         matrixC();
         printf("\n");
     }
