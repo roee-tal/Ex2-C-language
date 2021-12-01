@@ -17,7 +17,7 @@ while (c!='D')
         printf("\n");
     }
 
-    scanf("%c",  &a);
+    scanf("%c",  &c);
 
 }
 return 0;
